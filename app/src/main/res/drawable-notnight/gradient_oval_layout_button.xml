@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <bitmap android:src="@drawable/src_oval_layout_button"/>
+    </item>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient android:angle="90" android:startColor="#357488" android:centerColor="#88357488" android:endColor="#88001326"/>
+        </shape>
+    </item>
+</layer-list>

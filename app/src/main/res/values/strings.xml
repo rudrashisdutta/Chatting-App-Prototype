@@ -1,0 +1,15 @@
+<resources>
+
+    <!--MAIN-->
+    <string name="app_name">Basic Chatting App</string>
+
+    <!--Login Activity-->
+    <string name="getOtp">Get OTP</string>
+    <string name="pnoHint">Enter your number here....</string>
+    <string name="app_logo_description">It is the logo of the application.</string>
+    <string name="indian_dial_code">+91</string>
+    <string name="otp_sent">OTP HAS BEEN SENT</string>
+    <string name="on_invalid_pno">PLEASE ENTER A VALID PHONE NUMBER</string>
+    <string name="on_empty_pno">PHONE NUMBER CANNOT BE EMPTY</string>
+    <string name="empty_string" />
+</resources>

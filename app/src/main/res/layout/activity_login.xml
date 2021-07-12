@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    tools:context=".activity.LoginActivity"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/app_logo_description"
+        android:elevation="1000dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basic_chatting_app_logo_night" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/src_app_name_container"
+        android:elevation="1000dp"
+        android:fontFamily="@font/amaranth"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ovalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/appIcon"
+        app:layout_constraintStart_toStartOf="@+id/appIcon"
+        app:layout_constraintTop_toBottomOf="@+id/appIcon"
+        app:cardCornerRadius="110dp"
+        app:cardElevation="0.5dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/pno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/src_oval_layout_text_box"
+                android:ems="10"
+                android:fontFamily="@font/amaranth"
+                android:hint="@string/pnoHint"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingStart="75dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="20sp"
+                tools:ignore="Autofill,RtlSymmetry" />
+
+            <Button
+                android:id="@+id/getOTPForPNO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xml_oval_layout_button"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center"
+                android:text="@string/getOtp"
+                android:textColor="@color/button_text_color"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

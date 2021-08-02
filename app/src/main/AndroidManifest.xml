@@ -11,7 +11,8 @@
         android:theme="@style/Theme.BasicChattingApp">
 
         <activity android:name=".activity.LoginActivity"
-            android:windowSoftInputMode="stateVisible">
+            android:windowSoftInputMode="stateVisible"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

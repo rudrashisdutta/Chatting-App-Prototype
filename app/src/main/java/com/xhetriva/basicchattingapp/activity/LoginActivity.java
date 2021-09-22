@@ -21,11 +21,17 @@ import com.xhetriva.basicchattingapp.logic.ValidPhoneNumber;
 import java.util.Objects;
 
 
+/**
+ * The type Login activity.
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private Button getOTP;
     private EditText pno;
     private  Toast toast;
+    /**
+     * The Binding.
+     */
     protected ActivityLoginBinding binding;
 
     @Override
@@ -146,8 +152,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
 /*TODO
-* Add a LOG IN/ SIGN UP at the top.
-* Show Loading App Like a Toast. (cancel) => Maybe a complete new activity.
-* Add default modes of all components.
-* Add an App LOGO by adding XML or mipmap for app logo.
+*   Add a LOG IN/ SIGN UP at the top.
+*   Show Loading App Like a Toast. (cancel) => Maybe a complete new activity.\
+*   Add default modes of all components.
+*   Add an App LOGO by adding XML or mipmap for app logo.
  */

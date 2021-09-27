@@ -1,5 +1,8 @@
 package com.xhetriva.basicchattingapp.activity;
 
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+
+import android.app.ActionBar;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mukesh.OtpView;
 import com.xhetriva.basicchattingapp.R;
 import com.xhetriva.basicchattingapp.databinding.ActivityLoginBinding;
 import com.xhetriva.basicchattingapp.logic.ValidPhoneNumber;
@@ -26,9 +30,12 @@ import java.util.Objects;
  */
 public class LoginActivity extends AppCompatActivity {
 
+    private String phoneNumber;
+
     private Button getOTP;
     private EditText pno;
     private  Toast toast;
+    private OtpView otpView;
     /**
      * The Binding.
      */
@@ -43,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         pno = binding.pno;
         pno.requestFocus();
         getOTP = binding.getOTPForPNO;
+        otpView = binding.otpView;
         toast = new Toast(getApplicationContext());
         setGetOTP();
         setPno();
@@ -66,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void setGetOTP() {
         getOTP.setOnClickListener(v -> {
-            String phoneNumber = pno.getText().toString();
+            phoneNumber = pno.getText().toString();
             ValidPhoneNumber validPhoneNumber = new ValidPhoneNumber(phoneNumber);
             long validity;
             if ((validity = validPhoneNumber.isValid()) == ValidPhoneNumber.VALID) {
@@ -79,6 +87,9 @@ public class LoginActivity extends AppCompatActivity {
             pno.setText(R.string.empty_string);
 
         });
+    }
+    private void revert(){
+
     }
     private void onPhoneNumberValid(){
         try {
@@ -101,6 +112,12 @@ public class LoginActivity extends AppCompatActivity {
             textView.setText(R.string.otp_sent);
             toast.setView(view);
             toast.show();
+            otpView.setVisibility(View.VISIBLE);
+            pno.setEnabled(false);
+            pno.setVisibility(View.GONE);
+            otpView.requestFocus();
+            getOTP.setText(R.string.verify_otp);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

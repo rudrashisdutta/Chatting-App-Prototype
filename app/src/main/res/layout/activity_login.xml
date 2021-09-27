@@ -37,6 +37,23 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <com.mukesh.OtpView
+        android:id="@+id/otpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:inputType="number"
+        android:itemBackground="@color/status_bar"
+        android:textColor="@color/button_text_color"
+        app:OtpItemCount="6"
+        app:OtpLineColor="@color/android_background"
+        app:OtpViewType="line"
+        app:layout_constraintBottom_toTopOf="@+id/ovalLayout"
+        app:layout_constraintEnd_toEndOf="@+id/ovalLayout"
+        app:layout_constraintStart_toStartOf="@+id/ovalLayout"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:visibility="gone"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/ovalLayout"
         android:layout_width="wrap_content"

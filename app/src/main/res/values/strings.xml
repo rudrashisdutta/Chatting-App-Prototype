@@ -12,4 +12,5 @@
     <string name="on_invalid_pno">PLEASE ENTER A VALID PHONE NUMBER</string>
     <string name="on_empty_pno">PHONE NUMBER CANNOT BE EMPTY</string>
     <string name="empty_string" />
+    <string name="verify_otp">Verify OTP/ Login/ SignUp</string>
 </resources>
